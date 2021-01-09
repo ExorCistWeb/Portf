@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+body {
+  position: relative;
+  width: 1400px;
+  font-family: 'Oswald', sans-serif;
+  background: #303F9F;
+  color: #fff;
+  font-size: 20px;
+}
+
+.grid {
+  list-style: none;
+  margin-left: -40px;
+}
+
+.gc {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -.25em;
+  min-height: 1px;
+  padding-left: 40px;
+  vertical-align: top;
+}
+
+.gc--1-of-3 {
+  width: 33.33333%;
+}
+
+.gc--2-of-3 {
+  width: 66.66666%;
+}
+
+.naccs {
+  position: relative;
+  max-width: 900px;
+  margin: 100px auto 0;
+}
+
+.naccs .menu div {
+  padding: 15px 20px 15px 40px;
+  margin-bottom: 10px;
+  color: #303F9F;
+  background: #3F51B5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  font-weight: 700;
+  -webkit-transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.naccs .menu div:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.naccs .menu div span.light {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 24px;
+  left: 15px;
+  background-color: #303F9F;
+  border-radius: 100%;
+  -webkit-transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.naccs .menu div.active span.light {
+  background-color: #FBC02D;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  top: 0;
+  border-radius: 0;
+}
+
+.naccs .menu div.active {
+  color: #FBC02D;
+  padding: 15px 20px 15px 20px;
+}
+
+ul.nacc {
+  position: relative;
+  height: 0px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul.nacc li {
+  opacity: 0;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  position: absolute;
+  list-style: none;
+  -webkit-transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul.nacc li.active {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+ul.nacc li p{
+  margin: 0;
+  text-align: center;
+}
+ul.nacc li .inf{
+  text-align: start;
+  padding-left: 100px;
+}
+.btn {		
+	position: relative;	
+	padding: 1.4rem 4.2rem;
+	padding-right: 3.1rem;
+	font-size: 1.4rem;
+	color: var(--inv);
+	letter-spacing: 1.1rem;
+	text-transform: uppercase;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
+}
+
+.btn:before, .btn:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+.btn:hover {
+	color: var(--def);
+	transition-delay: .5s;
+}
+
+.btn:hover:before {
+	transition-delay: 0s;
+}
+
+.btn:hover:after {
+	background: var(--inv);
+	transition-delay: .35s;
+}
+.from-center:before {
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;
+}
+
+.from-center:after {
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: var(--inv);
+}
+
+.from-center:hover:before {
+	left: 0;
+	width: 100%;
+}
+
+.from-center:hover:after {
+	top: 0;
+	height: 100%;
+}
+.acc-btn{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 10px 70px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  border:2px solid #fff;
+  transition: 1.2s ease;
+}
+.acc-btn:hover{
+  background: #fff;
+  color: #000;
+  font-weight: 700; 
+}
+.acc-btn span{
+  color: #e7a806;
+  font-size: 20px;
+  padding-left: 4px;
+}
+.tabs {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+}
+
+.tabs>input[type="radio"]:checked+label {
+  font-weight: 600;
+  color: #FBC02D;
+  cursor: default;
+}
+
+.tabs>div {
+  display: none;
+  padding-top: 10px;
+}
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3 {
+  text-align: center;
+  display: block;
+}
+
+.tabs>label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  padding: 10px;
+  font-size: 20px;
+  background: #3f51b5;
+  font-weight: 600;
+  color: #303F9F;
+  transition: color 0.15s ease-in-out;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.tabs>label:first-of-type {
+  margin-left: 0;
+}
+.link{
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  margin-top: 20px;
+  padding: 10px 70px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  border:2px solid #fff;
+  transition: 1.2s ease;
+}
+.link:hover{
+  background: #fff;
+  color: #000;
+  font-weight: 700; 
+}
+.sp1 span{
+  color: #ff8b38;
+}
+.sp3 span{
+  color: #4985ff;
+}
